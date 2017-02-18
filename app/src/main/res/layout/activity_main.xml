@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/activity_main"
     android:layout_width="match_parent"
@@ -8,10 +8,100 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="ru.goodibunakov.weatherapp.MainActivity">
+    android:background="@drawable/gradient"
+    android:orientation="vertical"
+    tools:context="ru.goodibunakov.weatherapp.MainActivity"
+    android:weightSum="1">
+
+    <android.support.v7.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@android:color/transparent"
+        app:theme="@style/ThemeOverlay.AppCompat.ActionBar" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!" />
-</RelativeLayout>
+        android:text="Data"
+        android:id="@+id/data"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display3"
+        android:textColor="@android:color/white"
+        android:textSize="8sp"
+        android:layout_gravity="center_horizontal"
+        android:paddingTop="@dimen/for_data"/>
+
+    <TextView
+        android:text="\uf019"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/sky"
+        android:textColor="@android:color/holo_blue_bright"
+        android:textSize="160sp"
+        android:layout_gravity="center_horizontal" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center_horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="143dp"
+            android:text="21"
+            android:id="@+id/temperature"
+            android:textAppearance="@style/TextAppearance.AppCompat.Display3"
+            android:textColor="@android:color/white"
+            android:textSize="150sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="\u00b0C"
+            android:id="@+id/gradus"
+            android:textAppearance="@style/TextAppearance.AppCompat.Display3"
+            android:textColor="@android:color/white"
+            android:textSize="24sp"
+            android:layout_gravity="left"
+            android:paddingTop="20dp" />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="LONDON"
+        android:id="@+id/city"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display3"
+        android:textColor="@android:color/white"
+        android:textSize="20sp"
+        android:layout_gravity="center_horizontal"
+        android:paddingTop="12dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ENGLAND"
+        android:id="@+id/country"
+        android:letterSpacing="0.6"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display3"
+        android:textSize="10sp"
+        android:layout_gravity="center_horizontal"
+        android:textColor="@android:color/holo_blue_bright"
+        android:padding="4dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/made_by_goodi"
+        android:id="@+id/info"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display3"
+        android:textColor="#224f62"
+        android:textSize="8sp"
+        android:layout_gravity="center_horizontal"
+        android:paddingTop="15dp" />
+
+
+</LinearLayout>

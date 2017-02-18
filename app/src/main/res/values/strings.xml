@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">WeatherApp</string>
+    <string name="choose_city">Choose city</string>
+    <string name="made_by_goodi">Made by GooDi</string>
 </resources>
