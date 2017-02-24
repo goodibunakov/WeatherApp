@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/activity_main"
     android:layout_width="match_parent"
@@ -13,7 +14,8 @@
     tools:context="ru.goodibunakov.weatherapp.MainActivity"
     android:weightSum="1">
 
-    <android.support.v7.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+    <android.support.v7.widget.Toolbar
+        xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
@@ -24,21 +26,20 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Data"
         android:id="@+id/data"
         android:textAppearance="@style/TextAppearance.AppCompat.Display3"
         android:textColor="@android:color/white"
-        android:textSize="8sp"
+        android:textSize="@dimen/text_size_data"
         android:layout_gravity="center_horizontal"
-        android:paddingTop="@dimen/for_data"/>
+        android:paddingTop="@dimen/for_data_padding"/>
 
     <TextView
         android:text="\uf019"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/sky"
-        android:textColor="@android:color/holo_blue_bright"
-        android:textSize="160sp"
+        android:textColor="@color/colorAccent"
+        android:textSize="@dimen/text_size_sky"
         android:layout_gravity="center_horizontal" />
 
     <LinearLayout
@@ -50,47 +51,42 @@
 
         <TextView
             android:layout_width="wrap_content"
-            android:layout_height="143dp"
-            android:text="21"
+            android:layout_height="wrap_content"
             android:id="@+id/temperature"
             android:textAppearance="@style/TextAppearance.AppCompat.Display3"
             android:textColor="@android:color/white"
-            android:textSize="150sp" />
+            android:textSize="@dimen/text_size_temperature" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="\u00b0C"
             android:id="@+id/gradus"
             android:textAppearance="@style/TextAppearance.AppCompat.Display3"
             android:textColor="@android:color/white"
-            android:textSize="24sp"
+            android:textSize="@dimen/text_size_gradus"
             android:layout_gravity="left"
-            android:paddingTop="20dp" />
+            android:paddingTop="@dimen/for_gradus_padding" />
     </LinearLayout>
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="LONDON"
         android:id="@+id/city"
         android:textAppearance="@style/TextAppearance.AppCompat.Display3"
-        android:textColor="@android:color/white"
-        android:textSize="20sp"
+        android:textColor="@color/colorAccent"
+        android:textSize="@dimen/text_size_city"
         android:layout_gravity="center_horizontal"
-        android:paddingTop="12dp" />
+        android:paddingTop="@dimen/for_city_padding"/>
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="ENGLAND"
-        android:id="@+id/country"
-        android:letterSpacing="0.6"
+        android:id="@+id/details"
         android:textAppearance="@style/TextAppearance.AppCompat.Display3"
-        android:textSize="10sp"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/text_size_country"
         android:layout_gravity="center_horizontal"
-        android:textColor="@android:color/holo_blue_bright"
-        android:padding="4dp" />
+        android:paddingTop="@dimen/for_gradus_padding"/>
 
     <TextView
         android:layout_width="wrap_content"
@@ -101,7 +97,5 @@
         android:textColor="#224f62"
         android:textSize="8sp"
         android:layout_gravity="center_horizontal"
-        android:paddingTop="15dp" />
-
-
+        android:paddingTop="45dp" />
 </LinearLayout>
